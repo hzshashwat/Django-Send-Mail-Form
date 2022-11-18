@@ -1,0 +1,37 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <form action="" class="contact-form" method="POST">
+            {% csrf_token %}
+            <div class="form-control">
+                <div class="tag">Full Name</div>
+                <input type="text" name="full-name" id="">
+            </div>
+            <div class="form-control">
+                <div class="tag">Email</div>
+                <input type="text" name="email" id="">
+            </div>
+            <div class="form-control">
+                <div class="tag">Subject</div>
+                <input type="text" name="subject" id="">
+            </div>
+            <div class="form-control">
+                <div class="tag">Message</div>
+                <textarea name="message"  cols="30" rows="10"></textarea>
+            </div>
+            <div class="form-control">
+                <input type="submit" class="btn submit-btn" name="" value="Send Message"></div>
+        </form>
+    </div>
+</body>
+</html>
